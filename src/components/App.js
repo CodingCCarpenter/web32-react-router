@@ -34,18 +34,22 @@ export default function App(props) {
       </nav>
 
       {/* 👉 STEP 4 - Build a Switch with a Route for each of the components imported at the top */}
-      {/* With a switch, only the first route that matches is rendered */}
+      
       <Switch>
+      {/* With a switch, only the first route that matches is rendered */}
         <Route path='/items-list/:itemId'>
+        {/* With Route, if URL in Chrome matches the 'path' prep we gave the Route, then Home renders */}
           <Item />
         </Route>
+
         <Route path='/items-list'>
           <ItemsList items={[]}/>
         </Route>
+
         <Route exact path='/'>
-        {/* With Route, if URL in Chrome matches the 'path' prep we gave the Route, then Home renders */}
           <Home />
         </Route>
+
       </Switch>
     </div>
   )
