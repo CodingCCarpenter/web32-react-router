@@ -39,7 +39,7 @@ export default function App(props) {
       {/* With a switch, only the first route that matches is rendered */}
         <Route path='/items-list/:itemId'>
         {/* With Route, if URL in Chrome matches the 'path' prep we gave the Route, then Home renders */}
-          <Item />
+          <Item items={ stock }/>
         </Route>
 
         <Route path='/items-list'>

@@ -1,6 +1,6 @@
 import React from 'react'
 // We'll need quite a few imports from react-router-dom
-import { useRouteMatch } from 'react-router-dom'
+import { useRouteMatch, useHistory, NavLink, Route } from 'react-router-dom'
 
 import ItemDetails from './ItemDetails'
 
@@ -17,7 +17,7 @@ export default function Item(props) {
   // Beware! The ids are integers, whereas URL parameters are strings.
   // Beware! The JSX is expecting 'item' to exist instantly!
   // we use this hook to grab they dynamic parts of the path (:itemID).
-  const item = {}
+  const item = { }
 
   return (
     <div className='item-wrapper'>
