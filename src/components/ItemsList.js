@@ -1,12 +1,18 @@
 import React from 'react'
 // We'll need a Link and the useRouteMatch hook from 'react-router-dom'
-import { Link, useRouteMatch  } from 'react-router-dom'
+import { Link, useRouteMatch } from 'react-router-dom'
 
 export default function ItemsList(props) {
   const { items } = props
+
+  // url tells us where we are at (the current path in the URL bar in Chrome)
+  const { url, path } = useRouteMatch()
+
+  console.log('url from the hook', url)
+  console.log('path from the hook', path)
+
   // We'll grab the current URL using the hook
-  const { url } = useRouteMatch()
-  //url tells us where we are att (current path in URL bar)
+
   return (
     <div className='items-list-wrapper'>
       {items.map(item => (
@@ -23,7 +29,6 @@ export default function ItemsList(props) {
             />
             <p>{item.name}</p>
           </Link>
-          
           {/* Link ends */}
 
           <p>${item.price}</p>
