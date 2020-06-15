@@ -34,6 +34,17 @@ export default function App(props) {
       </nav>
 
       {/* 👉 STEP 4 - Build a Switch with a Route for each of the components imported at the top */}
+      <Switch>
+        <Route>
+          <Home />
+        </Route>
+        <Route>
+          <ItemsList items={[]}/>
+        </Route>
+        <Route>
+          <Item />
+        </Route>
+      </Switch>
     </div>
   )
 }
